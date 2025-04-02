@@ -3,15 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Привет, мир!</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Мультимедийные технологии</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .section {
+            margin: 50px 0;
+        }
+
+        /* Анимированная кнопка */
+        .animated-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .animated-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+
+        /* Двигающийся мяч */
+        .ball {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            position: relative;
+            animation: bounce 2s infinite ease-in-out;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-100px);
+            }
+        }
+
+        /* Эффект "падающих букв" */
+        .falling-text {
+            display: inline-block;
+            animation: fall 2s linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Мигающий заголовок */
+        .blinking {
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
 </head>
 <body>
-    <h1>Привет, мир!</h1>
-    <div id="content">
-        <p>Это моя первая веб-страница.</p>
-        <button class="button">Нажми меня!</button>
+
+    <!-- Меню -->
+    <nav>
+        <ul>
+            <li><a href="#audio" class="nav-link">Аудио</a></li>
+            <li><a href="#video" class="nav-link">Видео</a></li>
+            <li><a href="#map" class="nav-link">Карта</a></li>
+            <li><a href="#animation" class="nav-link">Анимация</a></li>
+        </ul>
+    </nav>
+
+    <!-- Раздел Аудио -->
+    <div id="audio" class="section">
+        <h2>Аудио</h2>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+        </audio>
     </div>
-    <script src="script.js"></script>
+
+    <!-- Раздел Видео -->
+    <div id="video" class="section">
+        <h2>Видео</h2>
+        <video controls width="500">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Раздел Карта -->
+    <div id="map" class="section">
+        <h2>Карта</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.95373531531686!3d-37.816279279751594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6e0!2sUniversity%20of%20Melbourne!5e0!3m2!1sen!2sau!4v1614840705184!5m2!1sen!2sau"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Раздел Анимация -->
+    <div id="animation" class="section">
+        <h2 class="h2">Анимация</h2>
+
+
+        <!-- Падающий текст -->
+        <h3>
+            <span class="falling-text">П</span>
+            <span class="falling-text">р</span>
+            <span class="falling-text">и</span>
+            <span class="falling-text">в</span>
+            <span class="falling-text">е</span>
+            <span class="falling-text">т</span>!
+        </h3>
+    </div>
+
 </body>
 </html>
